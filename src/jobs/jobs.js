@@ -45,22 +45,21 @@ export function displayJobsCards(companysJobData) {
           <li>
             <button class="buttons">${level}</button>
           </li>
+          ${languages
+            .map(
+              (language) =>
+                `<li><button class="buttons">${language}</button></li>`
+            )
+            .join("")}
+          ${tools
+            .map(
+              (tool) =>
+                `<li><button class="buttons">${tool}</button></li>` || []
+            )
+            .join("")}
         </ul>
       </div>
       `;
     companyJobs.insertAdjacentHTML("beforeend", html);
-
-    const filters = companyJobs.querySelectorAll(".filters");
-    const currentFilters = filters[index];
-
-    languages.forEach((language) => {
-      const html = `<li><button class="buttons">${language}</button></li>`;
-      currentFilters.insertAdjacentHTML("beforeend", html);
-    });
-
-    tools.forEach((tool) => {
-      const html = `<li><button class="buttons">${tool}</button></li>` || [];
-      currentFilters.insertAdjacentHTML("beforeend", html);
-    });
   });
 }
