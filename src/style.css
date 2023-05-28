@@ -1,1 +1,44 @@
 @import "../utils/resetStyle.css";
+@import "../utils/utilityClasses.css";
+
+:root {
+  /* Colors */
+  --bg-clr: hsl(180, 52%, 96%);
+  --clr-primary: hsl(180, 29%, 50%);
+  --clr-filter_tablets: hsl(180, 31%, 95%);
+  --clr-dark_grey: rgb(123, 142, 142);
+  --clr-dark: hsl(180, 14%, 20%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font size */
+  --fs-primary: 1rem;
+
+  /* Font family */
+  --ff-spartan: "League Spartan", sans-serif;
+
+  /* Font weight */
+  --fw-normal: 500;
+  --fw-bold: 700;
+}
+
+* {
+  font-family: var(--ff-spartan);
+}
+
+body {
+  background-color: var(--bg-clr);
+}
+
+.company-card {
+  background-color: var(--bg-white);
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgb(162, 218, 187);
+}
+
+.filters {
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}

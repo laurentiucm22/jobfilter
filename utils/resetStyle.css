@@ -21,6 +21,10 @@ h1 {
   margin: 0.67em 0;
 }
 
+li {
+  list-style: none;
+}
+
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */

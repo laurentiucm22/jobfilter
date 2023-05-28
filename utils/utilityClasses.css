@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.buttons {
+  outline: none;
+  border: none;
+  background-color: var(--clr-filter_tablets);
+  color: var(--clr-primary);
+  font-weight: var(--fw-bold);
+  padding: 0.5rem 0.6rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 250ms ease-in, color 250ms ease-in;
+}
+
+.buttons:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  transition: background 250ms ease-in, color 250ms ease-in;
+}
