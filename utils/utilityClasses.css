@@ -1,3 +1,4 @@
+/* Display */
 .flex {
   display: flex;
 }
@@ -6,10 +7,35 @@
   display: grid;
 }
 
-.buttons {
+/* .none {
+  display: none;
+} */
+
+/* Colors */
+.bg-clr {
+  background-color: var(--bg-clr);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.bg-filter_tablets {
+  background-color: var(--clr-filter_tablets);
+}
+
+.bg-dark_grey {
+  background-color: var(--clr-dark_grey);
+}
+
+.clr-primary {
+  color: var(--clr-primary);
+}
+
+/* UI */
+.jobs-buttons {
   outline: none;
   border: none;
-  background-color: var(--clr-filter_tablets);
   color: var(--clr-primary);
   font-weight: var(--fw-bold);
   padding: 0.5rem 0.6rem;
@@ -18,7 +44,7 @@
   transition: background 250ms ease-in, color 250ms ease-in;
 }
 
-.buttons:hover {
+.jobs-buttons:hover {
   background-color: var(--clr-primary);
   color: var(--clr-white);
   transition: background 250ms ease-in, color 250ms ease-in;

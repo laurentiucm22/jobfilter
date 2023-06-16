@@ -6,7 +6,7 @@
   --bg-clr: hsl(180, 52%, 96%);
   --clr-primary: hsl(180, 29%, 50%);
   --clr-filter_tablets: hsl(180, 31%, 95%);
-  --clr-dark_grey: rgb(123, 142, 142);
+  --clr-dark_grey: hsl(180, 8%, 52%);
   --clr-dark: hsl(180, 14%, 20%);
   --clr-white: hsl(0, 0%, 100%);
 
@@ -19,26 +19,120 @@
   /* Font weight */
   --fw-normal: 500;
   --fw-bold: 700;
+
+  /* Spacing */
+  --gap: 0.5rem;
+
+  /* Size */
+  --mobile-img_size: 3.125rem;
 }
 
 * {
   font-family: var(--ff-spartan);
 }
 
-body {
-  background-color: var(--bg-clr);
+.header {
+  height: 15vh;
+  background-color: hsl(179, 29%, 51%);
+}
+
+.header > img {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+}
+
+.company-jobs {
+  padding-top: 4rem;
 }
 
 .company-card {
-  background-color: var(--bg-white);
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
   margin: 1rem;
   border-radius: 3px;
+  padding: 0.5rem;
   box-shadow: 0 3px 10px rgb(162, 218, 187);
 }
 
+.company-info {
+  align-items: center;
+}
+
+.company-info > * {
+  padding-right: 1rem;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .filters {
+  padding: 1rem 0;
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: var(--gap);
+}
+
+@media screen and (max-width: 450px) {
+  section {
+    width: 95%;
+  }
+
+  .company-jobs {
+    padding-top: 2rem;
+  }
+
+  .company-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .company-image {
+    position: absolute;
+    top: -1.5rem;
+    left: 1rem;
+    width: var(--mobile-img_size);
+    height: var(--mobile-img_size);
+  }
+  .company-image > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .filters {
+    --gap: 1rem;
+    gap: var(--gap);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    width: 95%;
+  }
+
+  .company-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
